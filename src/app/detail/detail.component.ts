@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { GlobalVarService } from '../global-var.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router, public varglobal : GlobalVarService) {
+    this.judul2 = varglobal.getjudul();
+    this.isi2 = varglobal.getisi();
+    this.tgl2 = varglobal.gettanggal();
+  }
+
+  halaman2; judul2; isi2; tgl2;
 
   ngOnInit(): void {
   }

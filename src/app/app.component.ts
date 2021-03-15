@@ -25,6 +25,6 @@ export class AppComponent {
   }
 
   detailnote(){
-    this.router.navigate(["/detail/"])
+    this.router.navigate(["./detail/"])
   }
 }
