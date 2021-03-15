@@ -12,6 +12,7 @@ export class AppComponent {
     this.halaman1 = true;
   }
   halaman1 = true;
+  halaman2 = false;
   title = 'tugas-kelas';
   judul_note = "";
   isi_note = "";
@@ -26,5 +27,6 @@ export class AppComponent {
 
   detailnote(){
     this.router.navigate(["./detail/"])
+    this.halaman2 = true;
   }
 }

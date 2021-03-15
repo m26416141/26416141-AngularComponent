@@ -10,6 +10,7 @@
 
 <body>
     <ng-template *ngIf="halaman1; then templatetrue; else templatefalse"></ng-template>
+    <ng-template *ngIf="halaman2; then halaman2true; else templatefalse"></ng-template>
 </body>
 
 <!-- ng-template -->
@@ -20,8 +21,10 @@
     <br/>
 </ng-template>
 
-<ng-template #templatefalse></ng-template>
+<ng-template #halaman2true>
+    <router-outlet></router-outlet>
+</ng-template>
 
-<router-outlet></router-outlet>
+<ng-template #templatefalse></ng-template>
 
 </html>
